@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>slot</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer="" src="main.js"></script>
+</head>
+<body>
+  <h1>出川哲郎スロット</h1>
+  <main>
+    
+    <!-- <section class="panel">
+      <img src="images_3/003.png" alt="出川">
+      <div class="stop">ヤバイよ！止めて</div>
+     </section>
+
+     <section class="panel">
+      <img src="images_3/ダウンロード.png" alt="てっちゃん">
+      <div class="stop">ヤバイよ！止めて</div>
+     </section>
+
+     <section class="panel">
+      <img src="images_3/007.png" alt="哲郎">
+      <div class="stop">ヤバイよ！止めて</div>
+     </section> -->
+     
+  </main>
+  <div id="spin">回して!!回して!!</div>
+   
+  <div class="snow">●</div>
+  <div class="snow snow2nd">●</div>
+
+  <h2>⇩⇩出川哲郎の面白動画集⇩⇩</h2>
+
+  <div id="slider">
+    <ul id="photos">
+
+    
+
+  <li><iframe width="600" height="315" src="https://www.youtube.com/embed/97ipmpinpbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+    
+  <li><iframe width="600" height="315" src="https://www.youtube.com/embed/y_O8v5PLzUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li> 
+
+  <li><iframe width="600" height="315" src="https://www.youtube.com/embed/duHaejXYPrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+
+  <li><iframe width="560" height="315" src="https://www.youtube.com/embed/WrFNmNERUUs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+
+  <li><iframe width="560" height="315" src="https://www.youtube.com/embed/j97MoOpndcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+
+  
+  </ul>
+ </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+        var $photos = $('#photos'),
+            $lis    = $('#photos li');
+
+        var li_count = $lis.length;
+        var li_width = $lis.width() + parseInt($lis.css('margin-left'), 10) + parseInt($lis.css('margin-right'), 10);
+
+        $photos.css('width', (li_width * li_count) + 'px');
+
+        setInterval(function () {
+            $photos.stop().animate({
+                marginLeft: parseInt($photos.css('margin-left'), 10) - li_width + 'px'
+            }, function () {
+                $photos.css('margin-left', '0px');
+                $photos.find('li:first').appendTo($photos);
+            });
+        }, 15000);
+    });
+</script>
+  
+
+</body>
+</html>
